@@ -1,29 +1,37 @@
-import { useState } from 'react'
+import { useState , useEffect } from 'react'
+import { useParams } from "react-router";
 
 
- const initialRecepi = {
-        idMeal: 100 ,
-        strMeal: "spagity",
-        strInstructions: `
-        the first step is to buy a good italian pasta:
-        you also need fresh tomatoes`,
+//useParams is a hook, therefor it is a function 
+//after invoking the function a variable can be destructured
+// this variable must match the dinamic route  
 
-        strMealThumb:"https://static01.nyt.com/images/2025/01/17/multimedia/CR-Lemony-Hummus-Pasta-wtkj/CR-Lemony-Hummus-Pasta-wtkj-threeByTwoMediumAt2X.jpg",
-        strArea: "Italy",
-        strCategory:"pasta"
-    }
+
 
 function Details (){
-     const [recepie, setRecepie] = useState(initialRecepi)
+    //const idMeal = useParams().idMeal 
+    const {idMeal} = useParams()
+    console.log(idMeal)
+
+     const [recepie, setRecepie] = useState(null)
+
+     useEffect(() => {
+        fetch("https://www.themealdb.com/api/json/v1/1/lookup.php?i=" + idMeal)
+        .then(response => response.json())
+            // 4. Setting *dogImage* to the image url that we received from the response above
+        .then(data => setRecepie(data.meals[0]))
+    },[])
+
     return(
         <>
 
-        <h2>Home</h2>
-        <div className='recepiBox'>
+        <h2>Details</h2>
+        {recepie && (<div className='recepiBox'>
             <img src={recepie.strMealThumb}></img>
                 <p>{recepie.strMeal}</p>
 
-        </div>
+        </div>)}
+
         </>  
     )
 }

@@ -17,7 +17,7 @@ function Categories (){
     <>
         <h1>categories</h1>
         {recepies.map(recepie => (
-            <p><Link to="/Details">{recepie.strMeal}</Link></p>
+            <p><Link to={"/Details/" + recepie.idMeal}>{recepie.strMeal}</Link></p>
 
         ))}
         
