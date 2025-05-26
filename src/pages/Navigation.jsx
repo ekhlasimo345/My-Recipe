@@ -11,6 +11,10 @@ function Navigation(){
             <li>
               <Link to="/Categories">Categories</Link>
             </li>
+            <li>
+              <Link to="/Details">Details</Link>
+            </li>
+
           </ul>
         </nav>        
     )

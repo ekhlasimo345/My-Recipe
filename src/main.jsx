@@ -5,6 +5,7 @@ import { BrowserRouter, Routes, Route } from "react-router";
 import Categories from "../src/pages/Categories.jsx";
 import Layout from "./layout/Layout.jsx";
 import Home from "./pages/Home.jsx";
+import Details from "./pages/Details.jsx";
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
@@ -13,6 +14,7 @@ createRoot(document.getElementById("root")).render(
         <Route element={<Layout />}>
           <Route path="/" element={<Home />} />
           <Route path="/Categories" element={<Categories />} />
+          <Route path="/Details" element={<Details />} />
         </Route>
       </Routes>
     </BrowserRouter>
