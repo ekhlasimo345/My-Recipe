@@ -4,22 +4,26 @@ import { Link } from 'react-router-dom'
 
 const initialRecepies = [
     {
-        name: "Pasta",
-        description: `
+        idMeal: 100 ,
+        strMeal: "spagity",
+        strInstructions: `
         the first step is to buy a good italian pasta:
         you also need fresh tomatoes`,
-        price: 20.50,
-        pictureUrl:"https://static01.nyt.com/images/2025/01/17/multimedia/CR-Lemony-Hummus-Pasta-wtkj/CR-Lemony-Hummus-Pasta-wtkj-threeByTwoMediumAt2X.jpg",
-        originCountry:"Italy"
+
+        strMealThumb:"https://static01.nyt.com/images/2025/01/17/multimedia/CR-Lemony-Hummus-Pasta-wtkj/CR-Lemony-Hummus-Pasta-wtkj-threeByTwoMediumAt2X.jpg",
+        strArea: "Italy",
+        strCategory:"pasta"
     },
     {
-      name: "Soshi",
-        description: `
+        idMeal: 101 ,
+        strMeal: "Soshi",
+        strInstructions: `
         Salmen is the most popular Soshi fish:
         the rice is also important`,
-        price: 25.50,  
-        pictureUrl:"https://www.bizben.com/pictures/2922241.jpg?ver=1746158400",
-        originCountry:"Japan"
+        strMealThumb:"https://www.bizben.com/pictures/2922241.jpg?ver=1746158400",
+        strArea:"Japan",
+        strCategory:"seafood"
+
     }
 ]
 
@@ -29,7 +33,7 @@ function Categories (){
     <>
         <h1>categories</h1>
         {recepies.map(recepie => (
-            <p><Link to="/Details">{recepie.name}</Link></p>
+            <p><Link to="/Details">{recepie.strMeal}</Link></p>
 
         ))}
         
