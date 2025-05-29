@@ -1,14 +1,18 @@
-body {margin:0;}
+body {
+  margin:0;
+}
 
 ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
   overflow: hidden;
-  background-color: #333;
+  background-color: #27ee52;
   position: fixed;
   top: 0;
   width: 100%;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.15); /* Add this line */
+
 }
 
 li {
@@ -17,16 +21,16 @@ li {
 
 li a {
   display: block;
-  color: white;
+  color: rgb(4, 5, 4);
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
 }
 
 li a:hover:not(.active) {
-  background-color: #111;
+  background-color: #b5fbaa;
 }
 
 .active {
-  background-color: #04AA6D;
+  background-color: #12f312;
 }

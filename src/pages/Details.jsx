@@ -1,5 +1,6 @@
 import { useState , useEffect } from 'react'
 import { useParams } from "react-router";
+import './Details.css'
 
 
 //useParams is a hook, therefor it is a function 
@@ -24,14 +25,13 @@ function Details (){
 
     return(
         <>
-
-        <h2>Details</h2>
+                <h2 class="strName">{recepie.strMeal}</h2>
         {recepie && (<div className='recepiBox'>
-            <img src={recepie.strMealThumb}></img>
-                <p>{recepie.strMeal}</p>
-                
-                <p>{recepie.strInstructions}</p>
-                
+            <img src={recepie.strMealThumb} class="image"></img>
+                <div className="recepiText">
+                    <p class="detail">Details</p>
+                    <p class="strInstructions">{recepie.strInstructions}</p>
+                </div>
 
         </div>)}
 

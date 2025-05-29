@@ -1,5 +1,6 @@
 import { useState , useEffect } from 'react'
 import { Link } from 'react-router-dom'
+import './Categories.css'
 
 
 function Categories (){
@@ -30,27 +31,27 @@ function Categories (){
     
     return(
     <>
-        <h1>categories</h1>
+        <h1 class="title" >Categories</h1>
         <section>
-        <h3>Desserts</h3>
+        <h3 class="desserts">Desserts</h3>
             {dessertRecepies.map(recepie => (
             <p><Link to={"/Details/" + recepie.idMeal}>{recepie.strMeal}</Link></p>
         ))}
         </section>
-        <h3>Seafood</h3>
+        <h3 class="seafood" >Seafood</h3>
         <section>
             {seafoodRecepies.map(recepie => (
             <p><Link to={"/Details/" + recepie.idMeal}>{recepie.strMeal}</Link></p>
         ))}
         </section>
         <section>
-            <h3>Vegetarian</h3>
+            <h3 class="vegetarian">Vegetarian</h3>
             {vegetarianRecepies.map(recepie => (
             <p><Link to={"/Details/" + recepie.idMeal}>{recepie.strMeal}</Link></p> 
         ))}
         </section>
         <section>
-            <h3>Pasta</h3>
+            <h3 class="pasta">Pasta</h3>
             {pastaRecepies.map(recepie => (
             <p><Link to={"/Details/" + recepie.idMeal}>{recepie.strMeal}</Link></p> 
         ))}

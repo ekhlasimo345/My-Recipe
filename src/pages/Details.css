@@ -1,0 +1,40 @@
+.strName {
+  font-size: 2.5rem;
+  margin-bottom: 3rem;
+  margin-top: 5rem;;
+  color: #333;
+  text-align: center;
+}
+
+.recepiBox {
+  display: flex;
+  align-items: flex-start;
+  gap: 2rem; /* space between image and text */
+}
+
+.image {
+  max-width: 700px;
+  height: auto;
+  border-radius: 20px;
+  margin-left: 20px;
+}
+
+.recepiText {
+    border-style: solid;
+    border-radius: 20px;
+    border-color: rgb(29, 222, 51);
+  flex: 1;
+  padding: 15px;          /* Space inside the border */
+  margin: 15px;         
+}
+.detail {
+    color: rgb(30, 214, 45);
+  font-size: 1.6rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+.strInstructions {
+  font-size: 1.2rem;
+  margin-right: 30px;
+  margin-bottom: 0.5rem;
+}
