@@ -6,14 +6,14 @@ import { useParams } from "react-router";
 //after invoking the function a variable can be destructured
 // this variable must match the dinamic route  
 
-
-
 function Details (){
     //const idMeal = useParams().idMeal 
     const {idMeal} = useParams()
     console.log(idMeal)
 
      const [recepie, setRecepie] = useState(null)
+     
+
 
      useEffect(() => {
         fetch("https://www.themealdb.com/api/json/v1/1/lookup.php?i=" + idMeal)
