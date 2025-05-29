@@ -11,7 +11,6 @@ function Details (){
     //const idMeal = useParams().idMeal 
     const {idMeal} = useParams()
     console.log(idMeal)
-
      const [recepie, setRecepie] = useState(null)
      
 
@@ -21,19 +20,23 @@ function Details (){
         .then(response => response.json())
             // 4. Setting *dogImage* to the image url that we received from the response above
         .then(data => setRecepie(data.meals[0]))
-    },[])
+    },[idMeal])
 
     return(
         <>
-                <h2 class="strName">{recepie.strMeal}</h2>
-        {recepie && (<div className='recepiBox'>
-            <img src={recepie.strMealThumb} class="image"></img>
-                <div className="recepiText">
-                    <p class="detail">Details</p>
-                    <p class="strInstructions">{recepie.strInstructions}</p>
-                </div>
-
-        </div>)}
+        {recepie && (
+        <div>
+            <h2 className="strName">{recepie.strMeal}</h2>
+            
+            <div className='recepiBox'>
+                <img src={recepie.strMealThumb} className="image"></img>
+                    <div className="recepiText">
+                        <p className="detail">Details</p>
+                        <p className="strInstructions">{recepie.strInstructions}</p>
+                    </div>
+            </div>
+        </div>
+    )}
 
         </>  
     )
