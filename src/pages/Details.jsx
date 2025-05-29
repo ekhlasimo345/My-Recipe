@@ -29,6 +29,9 @@ function Details (){
         {recepie && (<div className='recepiBox'>
             <img src={recepie.strMealThumb}></img>
                 <p>{recepie.strMeal}</p>
+                
+                <p>{recepie.strInstructions}</p>
+                
 
         </div>)}
 
