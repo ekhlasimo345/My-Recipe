@@ -12,7 +12,17 @@ function Details (){
     const {idMeal} = useParams()
     console.log(idMeal)
      const [recepie, setRecepie] = useState(null)
-     
+     const [comments,setComments]= useState([{
+        name:"my name",
+        text:"it is good"
+     },
+     {
+        name:"user",
+        text:"yummy"
+     }
+    ])
+    const [name, setName] = useState("")
+    const [commented, setCommented] = useState("")
 
 
      useEffect(() => {
@@ -22,22 +32,38 @@ function Details (){
         .then(data => setRecepie(data.meals[0]))
     },[idMeal])
 
+    const handleSubmit = ()=>{
+        setComments([...comments,{name,commented}])
+        setName("") 
+        setCommented("") 
+    }
+    
     return(
         <>
         {recepie && (
         <div>
             <h2 className="strName">{recepie.strMeal}</h2>
-            
+
             <div className='recepiBox'>
-                <img src={recepie.strMealThumb} className="image"></img>
+                <img src={recepie.strMealThumb} className="image">
+                </img>
                     <div className="recepiText">
                         <p className="detail">Details</p>
                         <p className="strInstructions">{recepie.strInstructions}</p>
+                        
+                        <ul>
+                            {comments.map((comment,index )=> (<li key={index}><p>{comment.name},{comment.text}</p> </li>))}
+                        </ul>
+                        <input type="text" value={name} onChange={(e) => setName(e.target.value)} placeholder="insert your name..."/>
+                        <textarea value={commented} onChange={(e) => setCommented(e.target.value)} placeholder="comments here..." rows={3}/>
+                        <button onClick={handleSubmit}>Submit</button>
                     </div>
             </div>
         </div>
+            
+        
     )}
-
+ 
         </>  
     )
 }
