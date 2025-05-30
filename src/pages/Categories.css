@@ -1,0 +1,5 @@
+.categoriesBox {
+    display:flex;
+    flex-direction: row;
+
+}

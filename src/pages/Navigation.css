@@ -67,4 +67,14 @@ nav{
     background-color: #12f312;
   }
 
+  li.searchBox {
+    float: right;
+
+    span {
+      display:flex;
+      flex-direction: row;
+    }
+   
+  }
+
 }
