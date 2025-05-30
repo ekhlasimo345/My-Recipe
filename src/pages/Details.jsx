@@ -11,16 +11,8 @@ function Details (){
     //const idMeal = useParams().idMeal 
     const {idMeal} = useParams()
     console.log(idMeal)
-     const [recepie, setRecepie] = useState(null)
-     const [comments,setComments]= useState([{
-        name:"my name",
-        text:"it is good"
-     },
-     {
-        name:"user",
-        text:"yummy"
-     }
-    ])
+    const [recepie, setRecepie] = useState(null)
+    const [comments,setComments]= useState([])
     const [name, setName] = useState("")
     const [commented, setCommented] = useState("")
 
@@ -52,7 +44,7 @@ function Details (){
                         <p className="strInstructions">{recepie.strInstructions}</p>
                         
                         <ul>
-                            {comments.map((comment,index )=> (<li key={index}><p>{comment.name},{comment.text}</p> </li>))}
+                            {comments.map((comment,index )=> (<li key={index}><p>{comment.name}, {comment.commented}</p> </li>))}
                         </ul>
                         <input type="text" value={name} onChange={(e) => setName(e.target.value)} placeholder="insert your name..."/>
                         <textarea value={commented} onChange={(e) => setCommented(e.target.value)} placeholder="comments here..." rows={3}/>
