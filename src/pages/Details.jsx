@@ -42,14 +42,16 @@ function Details (){
                     <div className="recepiText">
                         <p className="detail">Details</p>
                         <p className="strInstructions">{recepie.strInstructions}</p>
-                        
+                    </div>
+                    <div className='commentBar'>  
                         <ul>
                             {comments.map((comment,index )=> (<li key={index}><p>{comment.name}, {comment.commented}</p> </li>))}
                         </ul>
                         <input type="text" value={name} onChange={(e) => setName(e.target.value)} placeholder="insert your name..."/>
                         <textarea value={commented} onChange={(e) => setCommented(e.target.value)} placeholder="comments here..." rows={3}/>
                         <button onClick={handleSubmit}>Submit</button>
-                    </div>
+                    </div>  
+                    
             </div>
         </div>
             

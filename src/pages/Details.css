@@ -20,11 +20,13 @@
 }
 
 .recepiText {
+  display: block;
     border-style: solid;
     border-radius: 20px;
     border-color: rgb(29, 222, 51);
   flex: 1;
-  padding: 15px;          /* Space inside the border */
+  /* Space inside the border */
+  padding: 15px;          
   margin: 15px;         
 }
 .detail {
@@ -65,6 +67,10 @@ textarea {
 }
 textarea:focus {
   border-color: #12f312;
+}
+
+.commentBar li {
+  color:red;
 }
 
 button {
