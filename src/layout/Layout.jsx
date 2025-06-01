@@ -9,11 +9,7 @@ function Layout(){
       <main>
         <Outlet />
       </main>
-      <footer>
-        <p>
-          Legal information
-        </p>
-      </footer>
+      
     </div>
     )
 }

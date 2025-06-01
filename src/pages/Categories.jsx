@@ -31,28 +31,30 @@ function Categories (){
     
     return(
     <>
+    
         <h1>Categories</h1>
         <div className='categoriesBox'>
+        
             <section>
-            <h3 class="desserts">Desserts</h3>
+            <h3 className="desserts">Desserts</h3>
                 {dessertRecepies.map(recepie => (
                 <p key={recepie.idMeal}><Link to={"/Details/" + recepie.idMeal}>{recepie.strMeal}</Link></p>
             ))}
             </section>
             <section>
-             <h3 class="seafood" >Seafood</h3>
+             <h3 className="seafood" >Seafood</h3>
                 {seafoodRecepies.map(recepie => (
                 <p key={recepie.idMeal}><Link to={"/Details/" + recepie.idMeal}>{recepie.strMeal}</Link></p>
             ))}
             </section>
             <section>
-                <h3 class="vegetarian">Vegetarian</h3>
+                <h3 className="vegetarian">Vegetarian</h3>
                 {vegetarianRecepies.map(recepie => (
                 <p key={recepie.idMeal}><Link to={"/Details/" + recepie.idMeal}>{recepie.strMeal}</Link></p> 
             ))}
             </section>
             <section>
-                <h3 class="pasta">Pasta</h3>
+                <h3 className="pasta">Pasta</h3>
                 {pastaRecepies.map(recepie => (
                 <p key={recepie.idMeal}><Link to={"/Details/" + recepie.idMeal}>{recepie.strMeal}</Link></p> 
             ))}

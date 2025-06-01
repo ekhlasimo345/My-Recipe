@@ -67,9 +67,15 @@ nav{
     background-color: #12f312;
   }
 
+  span {
+      display:flex;
+      flex-direction: row;
+    }
+
   li.searchBox {
     float: right;
   }
+  
     li input {
     border: none;
     outline: none;
@@ -77,26 +83,36 @@ nav{
     background-color: #27ee52;
     box-shadow: inset 2px 2px 5px rgba(0,0,0,0.3);
   }
-
- 
-
-    span {
-      display:flex;
-      flex-direction: row;
-    }
+  li input:hover {
+    scale: 1.05;
+    transition: 300ms;
+  }
 
     li button {
-    border: solid 1px #27ee52;
+    border: none;
         outline: none;
-   padding: 5px 15px;
-  
+    padding: 5px 15px;
     margin: 4px 2px;
     cursor: pointer;
     border-radius: 15px;
     background-color: #27ee52;
-    box-shadow: inset 2px 2px 5px rgba(14, 14, 14, 0.3);
+    box-shadow: inset 5px 5px 10px rgba(10, 10, 10, 0.3);
   }
-   
+  li button:hover {
+    scale: 1.05;
+    transition: 300ms;
   }
-
+  li button:active {
+    box-shadow: inset 5px 5px 10px rgba(2, 2, 2, 0.3);
+    transform: translateY(2px);
+  }
+  li button:focus {
+    outline: none;
+  }
+  li button:focus-visible {
+    outline: 2px solid #46f312;
+    outline-offset: 2px;
+  }
+  
+}
 
