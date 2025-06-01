@@ -69,12 +69,34 @@ nav{
 
   li.searchBox {
     float: right;
+  }
+    li input {
+    border: none;
+    outline: none;
+    border-radius: 15px;
+    background-color: #27ee52;
+    box-shadow: inset 2px 2px 5px rgba(0,0,0,0.3);
+  }
+
+ 
 
     span {
       display:flex;
       flex-direction: row;
     }
+
+    li button {
+    border: solid 1px #27ee52;
+        outline: none;
+   padding: 5px 15px;
+  
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 15px;
+    background-color: #27ee52;
+    box-shadow: inset 2px 2px 5px rgba(14, 14, 14, 0.3);
+  }
    
   }
 
-}
+
