@@ -5,6 +5,10 @@
   color: #333;
   text-align: center;
 }
+.detailsContainer {
+  display: flex;
+  flex-direction: column;
+}
 
 .recepiBox {
   display: flex;
@@ -49,6 +53,7 @@ input[type="text"] {
   font-size: 1rem;
   outline: none;
   transition: border-color 0.2s;
+  max-width: 300px;
 }
 input[type="text"]:focus {
   border-color: #12f312;
@@ -64,13 +69,16 @@ textarea {
   resize: vertical;
   outline: none;
   transition: border-color 0.2s;
+  max-width: 300px;
 }
 textarea:focus {
   border-color: #12f312;
 }
 
 .commentBar li {
-  color:red;
+  color:rgb(7, 7, 7);
+  flex: 1;
+  
 }
 
 button {
@@ -96,4 +104,10 @@ button:active {
   box-shadow: 0 2px 8px rgba(18, 243, 18, 0.18);
   background-color: #1dde33;
   color: #fff;
+}
+
+.error {
+  color: red;
+  font-size: 1.2rem;
+  margin-top: 10px; 
 }

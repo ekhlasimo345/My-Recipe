@@ -16,5 +16,14 @@ html, body, #root {
     flex-direction: row;
     align-items: center;
     }
+
+    .customLink{
+        color : green
+    }
+
+    .customLink:hover{
+        color: red;
+    }
 }
+
     

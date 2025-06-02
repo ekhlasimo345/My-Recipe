@@ -38,25 +38,25 @@ function Categories (){
             <section>
             <h3 className="desserts">Desserts</h3>
                 {dessertRecepies.map(recepie => (
-                <p key={recepie.idMeal}><Link to={"/Details/" + recepie.idMeal}>{recepie.strMeal}</Link></p>
+                <p key={recepie.idMeal}><Link className="customLink" to={"/Details/" + recepie.idMeal}>{recepie.strMeal}</Link></p>
             ))}
             </section>
             <section>
              <h3 className="seafood" >Seafood</h3>
                 {seafoodRecepies.map(recepie => (
-                <p key={recepie.idMeal}><Link to={"/Details/" + recepie.idMeal}>{recepie.strMeal}</Link></p>
+                <p key={recepie.idMeal}><Link className="customLink" to={"/Details/" + recepie.idMeal}>{recepie.strMeal}</Link></p>
             ))}
             </section>
             <section>
                 <h3 className="vegetarian">Vegetarian</h3>
                 {vegetarianRecepies.map(recepie => (
-                <p key={recepie.idMeal}><Link to={"/Details/" + recepie.idMeal}>{recepie.strMeal}</Link></p> 
+                <p key={recepie.idMeal}><Link className="customLink" to={"/Details/" + recepie.idMeal}>{recepie.strMeal}</Link></p> 
             ))}
             </section>
             <section>
                 <h3 className="pasta">Pasta</h3>
                 {pastaRecepies.map(recepie => (
-                <p key={recepie.idMeal}><Link to={"/Details/" + recepie.idMeal}>{recepie.strMeal}</Link></p> 
+                <p key={recepie.idMeal}><Link className="customLink" to={"/Details/" + recepie.idMeal}>{recepie.strMeal}</Link></p> 
             ))}
             </section>
         </div>
