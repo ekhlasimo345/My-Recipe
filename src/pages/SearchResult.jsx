@@ -16,7 +16,7 @@ function SearchResult (){
                 .then(data => setResults(data.meals))
            
     
-        },[])
+        },[searchWord])
 
 
 
