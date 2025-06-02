@@ -54,10 +54,18 @@ function Details (){
                         <ul>
                             {comments.map((comment,index )=> (<li key={index}><strong>{comment.name}</strong>: <i> {comment.commented} </i></li>))}
                         </ul>
-                        <input type="text" value={name} onChange={(e) => setName(e.target.value)} placeholder="insert your name..."/>
-                        <textarea value={commented} onChange={(e) => setCommented(e.target.value)} placeholder="comments here..." rows={3}/>
-                        <button onClick={handleSubmit}>Submit</button>
-                        {error && <p className="error">{error}</p>}
+                        <div className='commentForm'>
+                            <div className='textElements'>
+                                <input type="text" value={name} onChange={(e) => setName(e.target.value)} placeholder="insert your name..."/>
+                                <textarea value={commented} onChange={(e) => setCommented(e.target.value)} placeholder="comments here..." rows={3}/>
+                            </div>
+                            <div className='commentSubmit'>
+                                <button onClick={handleSubmit}>Submit</button>
+                                {error && <p className="error">{error}</p>}
+                             </div>
+                        </div>
+                        
+                       
                     </div>  
                     
             </div>

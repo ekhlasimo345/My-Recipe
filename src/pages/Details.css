@@ -81,7 +81,24 @@ textarea:focus {
   
 }
 
-button {
+
+
+.error {
+  color: red;
+  font-size: 1.2rem;
+  margin-top: 10px; 
+}
+
+.textElements {
+  display: flex;
+  flex-direction: column;
+}
+
+.commentForm {
+  display: flex;
+  flex-direction: row;
+
+  button {
   background-color: #27ee52;
   color: #fff;
   border: none;
@@ -91,11 +108,15 @@ button {
   font-weight: bold;
   cursor: pointer;
   margin-top: 8px;
+  height: 2em;
+
+
   transition: 
     background 0.2s,
     color 0.2s,
     transform 0.2s,
     box-shadow 0.2s;
+
 }
 
 
@@ -106,8 +127,11 @@ button:active {
   color: #fff;
 }
 
-.error {
-  color: red;
-  font-size: 1.2rem;
-  margin-top: 10px; 
+.commentSubmit {
+  display: flex;
+  flex-direction: column;
+    margin-left: 10px;
+}
+
+  
 }
