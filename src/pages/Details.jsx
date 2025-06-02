@@ -26,10 +26,13 @@ function Details (){
     },[idMeal])
    
     const handleSubmit = ()=>{
-        if(name.trim() !== "" && commented.trim() !== ""){
+        if(name.trim() !== "" && commented.trim() !== ""){ 
+            setError(null)
             setComments([...comments,{name,commented}])
             setName("") 
             setCommented("") 
+        } else {
+            setError("please fill in the comment")
         }
     }
     
@@ -49,12 +52,12 @@ function Details (){
          </div>            
                     <div className='commentBar'>  
                         <ul>
-                            {comments.map((comment,index )=> (<li key={index}><p>{comment.name}, {comment.commented}</p> </li>))}
+                            {comments.map((comment,index )=> (<li key={index}><strong>{comment.name}</strong>: <i> {comment.commented} </i></li>))}
                         </ul>
                         <input type="text" value={name} onChange={(e) => setName(e.target.value)} placeholder="insert your name..."/>
                         <textarea value={commented} onChange={(e) => setCommented(e.target.value)} placeholder="comments here..." rows={3}/>
                         <button onClick={handleSubmit}>Submit</button>
-                        {!!error && <p className="error">{error}</p>}
+                        {error && <p className="error">{error}</p>}
                     </div>  
                     
             </div>
