@@ -24,16 +24,14 @@ function Details (){
             // 4. Setting *dogImage* to the image url that we received from the response above
         .then(data => setRecepie(data.meals[0]))
     },[idMeal])
-
-    const handleSubmit = (e)=>{
-
-        e.preventDefault()
-        if(name === "" || commented === ""){setError("please fill in all fields")}
-        else {setComments([...comments,{name,commented}])
-        setName("") 
-        setCommented("") 
-    }}
-        
+   
+    const handleSubmit = ()=>{
+        if(name.trim() !== "" && commented.trim() !== ""){
+            setComments([...comments,{name,commented}])
+            setName("") 
+            setCommented("") 
+        }
+    }
     
     return(
         <>
