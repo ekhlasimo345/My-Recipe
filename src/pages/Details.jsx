@@ -25,9 +25,11 @@ function Details (){
     },[idMeal])
 
     const handleSubmit = ()=>{
-        setComments([...comments,{name,commented}])
-        setName("") 
-        setCommented("") 
+        if(name.trim() !== "" && commented.trim() !== ""){
+            setComments([...comments,{name,commented}])
+            setName("") 
+            setCommented("") 
+        }
     }
     
     return(
@@ -43,9 +45,10 @@ function Details (){
                         <p className="detail">Details</p>
                         <p className="strInstructions">{recepie.strInstructions}</p>
                     </div>
+            </div>
                     <div className='commentBar'>  
                         <ul>
-                            {comments.map((comment,index )=> (<li key={index}><p>{comment.name}, {comment.commented}</p> </li>))}
+                            {comments.map((comment,index )=> (<li key={index}><strong>{comment.name}</strong> : <i>{comment.commented} </i> </li>))}
                         </ul>
                         <input type="text" value={name} onChange={(e) => setName(e.target.value)} placeholder="insert your name..."/>
                         <textarea value={commented} onChange={(e) => setCommented(e.target.value)} placeholder="comments here..." rows={3}/>
@@ -53,7 +56,7 @@ function Details (){
                     </div>  
                     
             </div>
-        </div>
+        
             
         
     )}
