@@ -26,7 +26,7 @@ function SearchResult (){
         <h1>Results</h1>
         <section>
             {results && results.map(recepie => (
-                <p key={recepie.idMeal}><Link to={"/Details/" + recepie.idMeal}>{recepie.strMeal}</Link></p>
+                <p key={recepie.idMeal}><Link to={"/My-Recipe/Details/" + recepie.idMeal}>{recepie.strMeal}</Link></p>
             ))}
             {!results && (<p>No recipes exists for "{searchWord}"</p>)}
         </section>

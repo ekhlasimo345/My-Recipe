@@ -8,15 +8,15 @@ function Navigation(){
         <nav>
           <ul>
             <li>
-              <Link to="/">Home</Link>
+              <Link to="/My-Recipe">Home</Link>
             </li>
             <li>
-              <Link to="/Categories">Categories</Link>
+              <Link to="Categories">Categories</Link>
             </li>
             <li className='searchBox'>
               <span>
                 <input type="text" value={word} onChange={e => setWord(e.target.value)} placeholder='search your word...'/>
-                <button onClick={e => navigate("/SearchResult/" + word)}>search</button>
+                <button onClick={e => navigate("SearchResult/" + word)}>search</button>
               </span>
             </li>
           </ul>
