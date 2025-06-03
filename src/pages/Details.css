@@ -49,7 +49,7 @@ input[type="text"] {
   padding: 8px 12px;
   margin: 10px 0 8px 0;
   border: 1.5px solid #1dde33;
-  background-color: #27ee52;
+  background-color: #6beb87d3;
   border-radius: 8px;
   font-size: 1rem;
   outline: none;
@@ -63,7 +63,7 @@ textarea {
   padding: 8px 12px;
   margin-bottom: 10px;
   border: 1.5px solid #1dde33;
-  background-color: #27ee52;
+  background-color: #6beb87d3;
   border-radius: 8px;
   font-size: 1rem;
   resize: vertical;
@@ -99,9 +99,9 @@ textarea:focus {
   flex-direction: row;
 
   button {
-  background-color: #27ee52;
+  background-color: #5dea7cea;
   color: #fff;
-  border: none;
+  border: 1.5px solid #08e021;
   border-radius: 8px;
   padding: 10px 24px;
   font-size: 1.1rem;
