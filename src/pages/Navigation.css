@@ -76,12 +76,11 @@ nav{
     float: right;
   }
   
-    li input {
-    border: none;
+    li input.placeHolder {
+    border: dashed 1.5px #75767b;
     outline: none;
     border-radius: 15px;
-    background-color: #45f16a;
-    box-shadow: inset 2px 2px 5px rgba(0,0,0,0.3);
+    background-color: #27ee52;
   }
   li input:hover {
     scale: 1.05;
@@ -89,7 +88,7 @@ nav{
   }
 
     li button {
-    border: none;
+    border: dashed 1.5px #72767b;
     outline: none;
     height: 35px;
     padding: 5px 15px;
@@ -97,7 +96,6 @@ nav{
     cursor: pointer;
     border-radius: 15px;
     background-color: #27ee52;
-    box-shadow: inset 5px 5px 10px rgba(10, 10, 10, 0.3);
   }
   li button:hover {
     scale: 1.05;

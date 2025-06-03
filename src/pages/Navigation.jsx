@@ -15,7 +15,7 @@ function Navigation(){
             </li>
             <li className='searchBox'>
               <span>
-                <input type="text" value={word} onChange={e => setWord(e.target.value)} placeholder='search your word...'/>
+                <input className="placeHolder" type="text" value={word} onChange={e => setWord(e.target.value)} placeholder='search your word...'/>
                 <button onClick={e => navigate("SearchResult/" + word)}>search</button>
               </span>
             </li>
