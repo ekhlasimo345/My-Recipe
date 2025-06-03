@@ -7,7 +7,6 @@ html, body, #root {
     background-image: url("https://img.freepik.com/free-photo/top-view-food-ingredients-with-vegetable-soup-bowl-notebook_23-2148834720.jpg?semt=ais_hybrid&w=740");
 }    
 body {
-    background: linear-gradient(135deg, #e0ffe7 0%, #b5fbaa 100%);
     min-height: 100vh;
     margin: 0;
     font-family: 'Segoe UI', 'Roboto', Arial, sans-serif;
