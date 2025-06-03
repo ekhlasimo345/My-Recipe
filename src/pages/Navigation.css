@@ -80,7 +80,7 @@ nav{
     border: none;
     outline: none;
     border-radius: 15px;
-    background-color: #27ee52;
+    background-color: #45f16a;
     box-shadow: inset 2px 2px 5px rgba(0,0,0,0.3);
   }
   li input:hover {
@@ -90,9 +90,10 @@ nav{
 
     li button {
     border: none;
-        outline: none;
+    outline: none;
+    height: 35px;
     padding: 5px 15px;
-    margin: 4px 2px;
+    margin: 10px 10px;
     cursor: pointer;
     border-radius: 15px;
     background-color: #27ee52;
